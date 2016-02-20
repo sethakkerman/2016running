@@ -1,0 +1,154 @@
+/*
+=======================================================================
+CSS by Seth Akkerman
+Hugely inspired by the organizational skills of Elliot Jay Stocks
+Last updated: 03/17/2014
+=======================================================================
+Contents:
+01 Sensible Defaults
+02 Typography
+	- Rendering
+	- Ligatures
+	- Families
+	- Headings
+	- Links
+	- Paragraphs, Lists, Other
+03 Weather Component
+04 Basic Layout
+05 Header
+06 Media Queries
+	- 600 up
+	- 900 up
+	- 1200 up
+	- 1400 up
+	- 1500 up
+	- 1800 up
+	- 2000 up
+	- 2400 up
+=======================================================================
+*/
+
+/*
+=========================
+ 01 Sensible Defaults
+=========================
+*/
+
+@import "reset.css";
+
+* { -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; } /* Apply a natural box layout model to all elements see http://paulirish.com/2012/box-sizing-border-box-ftw */
+
+div,
+article,
+section,
+header,
+footer,
+nav,
+figure,
+li { position:relative; } /* For absolutely positioning elements within containers  */
+  
+.group:after { display:block; height:0; clear:both; content:"."; visibility:hidden; } /* For clearing */
+
+body { background:#2A2d36; overflow:hidden; } 
+/* Chrome adds transparency to the ::selection background so the fix is to set the color in rgba and give the a a value of .99. Weird. */
+::-moz-selection { background:rgba(204, 196, 101, .99); color:#444749; }
+::selection { background:rgba(204, 196, 101, .99); color:#444749; }
+
+/*
+=========================
+ 02 Typography
+=========================
+*/
+
+/*
+  14 / 16 =     0.875em     (14px equivalent)
+  16 / 16 =     1em         (16px equivalent)
+  18 / 16 =     1.125em     (18px equivalent)
+  21 / 16 =     1.3125em    (21px equivalent)
+  24 / 16 =     1.5em       (24px equivalent)
+  30 / 16 =     1.875em     (30px equivalent)
+  72 / 16 =     4.5em       (72px equivalent)
+  */
+  
+/* 02a - Rendering */
+/* There seems to be a bug rendering fonts in mozilla on macs. The moz-osx css line fixed the visual issue. This may only be necessary when there is only one font served from typekit and the weights are specified by numerical values. */
+html { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* 02b - Ligatures */
+body { text-rendering:optimizeLegibility; }
+
+/* 02c - Families */
+body,
+input /* don't have yet */ { color:#444749; font-family:"jaf-facitweb","Helvetica Neue", Helvetica, Arial, sans-serif; font-size:90%; line-height:1.65em; font-weight:400; font-style:normal; }
+
+h1 { font-style:italic; font-weight:700; }
+
+strong { color:#999999; font-weight:700; }
+
+/* 02d- Headings */
+
+/* 02e- Links */
+
+/* 02f- Paragraphs, Lists, Other */
+p,
+li { padding:0em 0.125em; font-size:1.21em; line-height:1.55em; }
+li { list-style:none; }
+article ul li { list-style-type:disc; margin-left:1em; }
+article ol li { list-style-type:upper-roman; margin-left:1em; }
+blockquote p { border-left:10px solid rgba(0,0,0,0.05); font-size:1.5em; line-height:1.3125em; margin:0.5em 0; padding-left:1em; }
+blockquote + p cite { display:block; margin-top:-1em; padding-bottom:1em; text-align:right; }
+article.single p:first-child + p { font-size:1.875em; line-height:1.5em; }
+code, 
+pre { background:rgba(0,0,0,0.1); font-size:0.875em; }
+pre { margin:0.5em 0; padding-left:1em; }
+pre code { background:none; }
+h2 + p { color:rgba(0,0,0,0.3); padding:1.5em 0; }
+p.note { color:rgba(0,0,0,0.3); }
+div.primary h2 { font-size:1em; }
+p.note { padding-bottom:1em; }
+p.continue { padding-top:2em; }
+p.small-print { padding:8em 0 1em 0; }
+cite { font-style:normal; }
+
+/*
+=========================
+ 03 Weather Component
+=========================
+*/
+
+
+/*
+=========================
+ 04 Basic Layout
+=========================
+*/
+div.image_wrapper { width:100%; max-width: 1250px; padding:0em; margin-top:0em; height:auto; margin: 0 auto; }
+img { max-width:100%; display:block; }
+
+/*
+=========================
+ 05 Header
+=========================
+*/
+
+
+/*
+=========================
+ 06 Media Queries (mobile first approach)
+=========================
+*/
+
+/* 06a- 600 up */
+@media screen and (min-width:600px) {
+
+}
+
+/* 06b- 900 up */
+@media screen and (min-width:900px) {
+
+}
+
+@media screen and (min-width:1500px) {
+	div.image_wrapper { max-width: 1500px; }
+}
+
